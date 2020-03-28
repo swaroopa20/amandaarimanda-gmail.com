@@ -15,7 +15,7 @@ variable "instance_count" {
   default = "1"
 }
 variable "key_name" {
-  default = "srimul"
+  default = "Aws_Test"
   description = "the ssh key to be used for the EC2 instance"
 }
 
