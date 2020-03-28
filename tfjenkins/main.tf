@@ -2,13 +2,13 @@ provider "aws" {
    region = "us-east-2"
 }
 
-terraform {
-  backend "s3" {
-    bucket = "clisrimul"
-    key    = "Jenkins/terraform.tfstate"
-    region = "us-east-2"
-  }
-}
+#terraform {
+ # backend "s3" {
+ #   bucket = "clisrimul"
+  #  key    = "Jenkins/terraform.tfstate"
+  #  region = "us-east-2"
+ # }
+#}
 resource "aws_security_group" "allow_ssh" {
   name = "sg_jenkins"
   description = "Allow ssh inbound traffic"
@@ -59,7 +59,7 @@ connection {
     type     = "ssh"
     user     = "ubuntu"
     password = ""
-    private_key = "${file("~/srimul.pem")}"
+    private_key = "${file("~/Aws_Test.pem")}"
   }
 
 }
